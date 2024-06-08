@@ -4,7 +4,7 @@ import Image from "../images/Kan_image.png";
 
 const PageOwner = () => {
 	return (
-		<>
+		<div className="bg-gray-200 min-h-screen">
 			<header className="text-center flex flex-col items-center">
 				<h1 className="font-bold text-4xl mb-11">10_Kan - Genmate C</h1>
 				<picture>
@@ -23,7 +23,7 @@ const PageOwner = () => {
 					</p>
 				</article>
 			</main>
-		</>
+		</div>
 	);
 };
 

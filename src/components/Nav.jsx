@@ -4,8 +4,8 @@ import { Outlet, Link } from "react-router-dom";
 const Nav = () => {
 	return (
 		<div>
-			<nav>
-				<ul className="flex flex-row justify-end m-5 mx-6 gap-11 text-2xl font-semibold">
+			<nav className="bg-gray-200">
+				<ul className="flex flex-row justify-end p-5 mx-6 gap-11 text-2xl font-semibold">
 					<li>
 						<Link to="/">Home</Link>
 					</li>
