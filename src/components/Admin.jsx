@@ -17,21 +17,18 @@ function Admin() {
 						className="bg-white p-3 rounded-md w-[300px]"
 						type="text"
 						name="firstName"
-						value={firstName}
 						placeholder="Name"
 					/>
 					<input
 						className="bg-white p-3 rounded-md w-[300px]"
 						type="text"
 						name="lastName"
-						value={lastName}
 						placeholder="Last Name"
 					/>
 					<input
 						className="bg-white p-3 rounded-md w-[300px]"
 						type="text"
 						name="position"
-						value={position}
 						placeholder="Position"
 					/>
 					<button className="bg-indigo-500 p-3 px- font-semibold text-white rounded-md border-4 border-indigo-500  hover:border-4 hover:border-blue-400">
