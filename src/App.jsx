@@ -10,6 +10,9 @@ import Admin from "./pages/Admin.jsx";
 
 //สร้าง App*****หลัก
 const App = () => {
+	//สร้าง array ว่างไว้เก็บ object
+	const [tableData, setTableData] = useState([]);
+
 	//สร้าง router
 	const router = createBrowserRouter([
 		{
@@ -26,11 +29,11 @@ const App = () => {
 				},
 				{
 					path: "/user",
-					element: <User />,
+					element: <User tableData={tableData} />,
 				},
 				{
 					path: "/admin",
-					element: <Admin />,
+					element: <Admin tableData={tableData} setTableData={setTableData} />,
 				},
 				{
 					path: "/owner",
