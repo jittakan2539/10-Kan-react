@@ -34,6 +34,11 @@ function Admin({ tableData, setTableData }) {
 		setTableData((prevData) => prevData.filter((_, i) => i !== index));
 	};
 
+	//สร้าง function กดแล้วลบออกให้หมดให้ (array เก็บข้อมูลเป็นว่าง)
+	const deleteAll = () => {
+		setTableData((tableData = []));
+	};
+
 	//UI ปุ่มและตาราง
 	return (
 		<div className=" bg-gray-200 min-h-screen">
@@ -82,7 +87,7 @@ function Admin({ tableData, setTableData }) {
 			</form>
 
 			{/* ตาราง */}
-			<section className="flex justify-center">
+			<section className="flex flex-col items-center gap-5">
 				<table className=" mt-8 w-1/2 divide-y divide-gray-200 border border-black ">
 					<thead className="bg-slate-400">
 						<tr>
@@ -118,6 +123,12 @@ function Admin({ tableData, setTableData }) {
 						})}
 					</tbody>
 				</table>
+				<button
+					onClick={deleteAll}
+					className="border-2 border-red-500 bg-red-500 text-white rounded-md px-8 py-1 hover:border-red-950"
+				>
+					Delete all
+				</button>
 			</section>
 		</div>
 	);

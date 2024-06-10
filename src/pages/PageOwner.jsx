@@ -7,7 +7,7 @@ export default function PageOwner() {
 		<div className="bg-gray-200 min-h-screen">
 			<header className="text-center flex flex-col items-center">
 				<h1 className="font-bold text-4xl mb-11">10_Kan - Genmate C</h1>
-				<picture>
+				<picture className="rounded-full">
 					<img src={Image} alt="Kan's image" />
 				</picture>
 			</header>
