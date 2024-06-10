@@ -1,8 +1,8 @@
 import React from "react";
-import Nav from "./Nav.jsx";
+import Nav from "../components/Nav.jsx";
 import Image from "../images/Kan_image.png";
 
-const PageOwner = () => {
+export default function PageOwner() {
 	return (
 		<div className="bg-gray-200 min-h-screen">
 			<header className="text-center flex flex-col items-center">
@@ -25,6 +25,4 @@ const PageOwner = () => {
 			</main>
 		</div>
 	);
-};
-
-export default PageOwner;
+}

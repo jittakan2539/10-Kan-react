@@ -1,5 +1,4 @@
-import React from "react";
-import { Outlet, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function NavButton() {
 	return (
@@ -16,7 +15,6 @@ function NavButton() {
 					</button>
 				</Link>
 			</section>
-			<Outlet />
 		</div>
 	);
 }
