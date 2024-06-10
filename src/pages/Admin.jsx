@@ -57,25 +57,31 @@ function Admin({ tableData, setTableData }) {
 						className="bg-white p-3 rounded-md w-[300px]"
 						type="text"
 						name="firstName"
+						minLength="1"
 						placeholder="Name"
 						value={FormData.firstName}
 						onChange={handleChange}
+						required
 					/>
 					<input
 						className="bg-white p-3 rounded-md w-[300px]"
 						type="text"
 						name="lastName"
+						minLength="1"
 						placeholder="Last Name"
 						value={FormData.lastName}
 						onChange={handleChange}
+						required
 					/>
 					<input
 						className="bg-white p-3 rounded-md w-[300px]"
 						type="text"
 						name="position"
+						minLength="1"
 						placeholder="Position"
 						value={FormData.position}
 						onChange={handleChange}
+						required
 					/>
 					<button
 						type="submit"
