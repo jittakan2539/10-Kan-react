@@ -46,10 +46,8 @@ function Admin({ tableData, setTableData }) {
 				<h1>Generation Thailand</h1>
 				<h2>Home - Admin Sector</h2>
 			</header>
-
 			<NavButton />
 			{/* Admin หรือ User */}
-
 			<form onSubmit={handleSubmit} className="mt-5 flex flex-col items-center">
 				<h2 className="font-bold text-2xl mb-6">Create User Here</h2>
 				<section className="flex gap-8">
@@ -91,51 +89,54 @@ function Admin({ tableData, setTableData }) {
 					</button>
 				</section>
 			</form>
-
 			{/* ตาราง */}
-			<section className="flex flex-col items-center gap-5">
-				<table className=" mt-8 w-1/2 divide-y divide-gray-200 border border-black ">
-					<thead className="bg-slate-400">
-						<tr>
-							<th className="p-2 border border-black">Name</th>
-							<th className="p-2 border border-black">Last Name</th>
-							<th className="p-2 border border-black">Position</th>
-							<th className="p-2 border border-black">Delete</th>
-						</tr>
-					</thead>
-					<tbody className="bg-white ">
-						{tableData.map((formData, index) => {
-							return (
-								<tr key={index}>
-									<td className="p-2 border border-black font-normal">
-										{formData.firstName}
-									</td>
-									<td className="p-2 border border-black font-normal">
-										{formData.lastName}
-									</td>
-									<td className="p-2 border border-black font-normal">
-										{formData.position}
-									</td>
-									<td className="p-2 border border-black font-normal">
-										<button
-											onClick={() => handleDelete(index)}
-											className="border-2 border-red-500 bg-red-500 text-white rounded-md p-2 px-3 hover:border-red-950"
-										>
-											Delete
-										</button>
-									</td>
-								</tr>
-							);
-						})}
-					</tbody>
-				</table>
-				<button
-					onClick={deleteAll}
-					className="border-2 border-red-500 bg-red-500 text-white rounded-md px-8 py-1 hover:border-red-950"
-				>
-					Delete all
-				</button>
-			</section>
+
+			{/* ใช้ {เงื่อนไข1 && (display)} เพื่อเงื่อนไข1 เป็นจริง display ถึงจะแสดงออกมา */}
+			{tableData.length > 0 && (
+				<section className="flex flex-col items-center gap-5">
+					<table className=" mt-8 w-1/2 divide-y divide-gray-200 border border-black ">
+						<thead className="bg-slate-400">
+							<tr>
+								<th className="p-2 border border-black">Name</th>
+								<th className="p-2 border border-black">Last Name</th>
+								<th className="p-2 border border-black">Position</th>
+								<th className="p-2 border border-black">Delete</th>
+							</tr>
+						</thead>
+						<tbody className="bg-white ">
+							{tableData.map((formData, index) => {
+								return (
+									<tr key={index}>
+										<td className="p-2 border border-black font-normal">
+											{formData.firstName}
+										</td>
+										<td className="p-2 border border-black font-normal">
+											{formData.lastName}
+										</td>
+										<td className="p-2 border border-black font-normal">
+											{formData.position}
+										</td>
+										<td className="p-2 border border-black font-normal">
+											<button
+												onClick={() => handleDelete(index)}
+												className="border-2 border-red-500 bg-red-500 text-white rounded-md p-2 px-3 hover:border-red-950"
+											>
+												Delete
+											</button>
+										</td>
+									</tr>
+								);
+							})}
+						</tbody>
+					</table>
+					<button
+						onClick={deleteAll}
+						className="border-2 border-red-500 bg-red-500 text-white rounded-md px-8 py-1 hover:border-red-950"
+					>
+						Delete all
+					</button>
+				</section>
+			)}
 		</div>
 	);
 }
